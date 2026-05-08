@@ -24,7 +24,6 @@
     <Folder Include="Core\Entities\Interfaces\" />
     <Folder Include="Core\Entities\Settings\" />
     <Folder Include="Core\Entities\Service\" />
-    <Folder Include="Core\Interfaces\" />
     <Folder Include="Core\Settings\" />
     <Folder Include="Core\Services\" />
   </ItemGroup>

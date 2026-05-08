@@ -1,5 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using UESAN.SHOPPING.CORE.Core.Entities;
+using UESAN.SHOPPING.CORE.Core.Interfaces;
+using UESAN.SHOPPING.CORE.Infraestructure.Repositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 var _config = builder.Configuration;
 var cnx = _config.GetConnectionString("DevConnection");
 builder.Services.AddDbContext<StoreDBContext>(OptionsBuilderConfigurationExtensions => OptionsBuilderConfigurationExtensions.UseSqlServer(cnx));
+
+builder.Services.AddTransient<ICategoryRepository, CategoryRepository>();
 
 builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi

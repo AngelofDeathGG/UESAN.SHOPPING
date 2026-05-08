@@ -3,21 +3,22 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using UESAN.SHOPPING.CORE.Core.Entities;
+using UESAN.SHOPPING.CORE.Core.Interfaces;
 
 namespace UESAN.SHOPPING.CORE.Infraestructure.Repositories
 {
-    public class CategoryRepository
+    public class CategoryRepository : ICategoryRepository
     {
         private readonly StoreDBContext _context;
         public CategoryRepository(StoreDBContext context)
         {
             _context = context;
-        }  
+        }
         public async Task<IEnumerable<Category>> GetCategoriesAsync()
         {
             return await _context.Categories.ToListAsync();
         }
-        public async Task<Category> GetCategoryById(int id)
+        public async Task<Category?> GetCategoryById(int id)
         {
             return await _context.Categories.Where(c => c.Id == id).FirstOrDefaultAsync();
         }
@@ -51,6 +52,16 @@ namespace UESAN.SHOPPING.CORE.Infraestructure.Repositories
         {
             var context = new StoreDBContext();
             return context.Categories.ToList();
+        }
+
+        public Task GetAllAsync()
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task<IEnumerable<Category>> GetCategoriesAsync(int id)
+        {
+            throw new NotImplementedException();
         }
     }
 }
