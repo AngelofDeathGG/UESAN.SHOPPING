@@ -1,0 +1,60 @@
+{
+  "info": {
+    "_postman_id": "f5bef070-17db-45a6-afb6-b47a4ace90a5",
+    "name": "UESAN.SHOPPING",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48473313",
+    "_collection_link": "https://go.postman.co/collection/48473313-f5bef070-17db-45a6-afb6-b47a4ace90a5?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Metodo Get",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5247/Api/Category",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5247",
+          "path": [
+            "Api",
+            "Category"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Metodo Post",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"id\": 10,\r\n    \"description\": \"Mandos\",\r\n    \"isActive\": true,\r\n    \"products\": []\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:5247/Api/Category",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5247",
+          "path": [
+            "Api",
+            "Category"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
