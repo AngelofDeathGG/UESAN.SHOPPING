@@ -20,12 +20,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Core\DTOs\" />
     <Folder Include="Core\Entities\Interfaces\" />
     <Folder Include="Core\Entities\Settings\" />
     <Folder Include="Core\Entities\Service\" />
     <Folder Include="Core\Settings\" />
-    <Folder Include="Core\Services\" />
   </ItemGroup>
 
 </Project>
